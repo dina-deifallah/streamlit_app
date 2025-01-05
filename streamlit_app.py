@@ -32,7 +32,7 @@ fig = px.choropleth(data_frame=df,
                     color="total exports",
                     hover_name="state",
                     hover_data= "total exports",
-                    color_continuous_scale=px.colors.sequential.Magenta)
+                    color_continuous_scale=px.colors.sequential.algae)
 
 fig.update_layout(coloraxis_colorbar={'title':'Total Exports in Tons'})
 st.plotly_chart(fig, use_container_width=True, height=400)
@@ -57,7 +57,7 @@ col1, col2 = st.columns((2))
 with col1:
     st.subheader("Total Exports - "+formatted_states)
     fig=px.bar(data_frame=df_states, x='code', y="total exports", hover_name="state",
-               color_continuous_scale=px.colors.sequential.Magenta,
+               color_continuous_scale=px.colors.sequential.algae,
                color="total exports",
                labels={'code': 'State', 'total exports':'Total Exports'})
     st.plotly_chart(fig, use_container_width=True, height=200)
