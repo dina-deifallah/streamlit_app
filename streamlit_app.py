@@ -67,7 +67,7 @@ with col2:
     st.subheader("Categories Breakdown - "+formatted_states)
     cat_states_agg = df_cat_states.groupby("category")[['export']].sum().reset_index()
     fig = px.pie(data_frame=cat_states_agg, names='category', values='export', 
-             color='category', color_discrete_sequence=px.colors.qualitative.Safe, 
+             color='category', color_discrete_sequence=px.colors.qualitative.Prism, 
              hole=0.4)
     fig.layout.legend.title.text = "Export Categories"
     st.plotly_chart(fig, use_container_width=True, height=200)
