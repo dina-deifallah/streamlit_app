@@ -24,7 +24,7 @@ df_cat = pd.melt(frame=df, id_vars=['code', 'state'],
 
 
 # figure 1: total exports by state in a choropleth
-st.subheader("US Total Exports by State in Tons")
+st.subheader("US Total Exports by State in Million USD")
 fig = px.choropleth(data_frame=df,
                     locationmode='USA-states',
                     locations='code',
